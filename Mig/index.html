@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Miguel Fracassi</title>
+
+<link rel="icon" type="image/png" href="migfaviocn.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --primary:#3b82f6;
+    --text:#0f172a;
+    --muted:#64748b;
+    --border:#e5e7eb;
+    --background:#ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--background);
+    color:var(--text);
+}
+
+.container{
+    width:min(1200px,90%);
+    margin:auto;
+}
+
+nav{
+    padding:28px 0;
+    border-bottom:1px solid var(--border);
+    background:white;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.nav-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:1.2rem;
+    font-weight:800;
+    letter-spacing:-1px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--muted);
+    font-weight:500;
+}
+
+nav a:hover{
+    color:var(--text);
+}
+
+.hero{
+    padding:120px 0 100px;
+}
+
+.tag{
+    display:inline-block;
+    color:var(--primary);
+    font-size:.85rem;
+    font-weight:700;
+    letter-spacing:2px;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-size:clamp(4rem,8vw,7rem);
+    line-height:.95;
+    max-width:950px;
+    font-weight:900;
+    letter-spacing:-4px;
+}
+
+.hero p{
+    margin-top:30px;
+    max-width:700px;
+    color:var(--muted);
+    font-size:1.2rem;
+    line-height:1.9;
+}
+
+.buttons{
+    margin-top:45px;
+    display:flex;
+    gap:15px;
+}
+
+.btn{
+    text-decoration:none;
+    padding:15px 26px;
+    border-radius:12px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.primary{
+    background:var(--primary);
+    color:white;
+}
+
+.secondary{
+    border:1px solid var(--border);
+    color:var(--text);
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.stats{
+    margin-top:80px;
+    display:flex;
+    gap:80px;
+    flex-wrap:wrap;
+}
+
+.stats h2{
+    font-size:3rem;
+    color:var(--primary);
+}
+
+.stats span{
+    color:var(--muted);
+}
+
+.trusted{
+    padding:80px 0;
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+}
+
+.trusted small{
+    display:block;
+    text-align:center;
+    color:var(--muted);
+    margin-bottom:30px;
+    letter-spacing:2px;
+}
+
+.companies{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:60px;
+}
+
+.company{
+    color:#94a3b8;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.trusted-text{
+    text-align:center;
+    margin-top:40px;
+    color:var(--muted);
+}
+
+section{
+    padding:120px 0;
+}
+
+.section-title{
+    font-size:3rem;
+    margin-bottom:50px;
+    letter-spacing:-2px;
+}
+
+.about{
+    max-width:850px;
+}
+
+.about p{
+    color:var(--muted);
+    line-height:2;
+    font-size:1.1rem;
+}
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+}
+
+.project{
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:35px;
+    transition:.3s;
+}
+
+.project:hover{
+    transform:translateY(-5px);
+}
+
+.project h3{
+    margin-bottom:15px;
+}
+
+.project p{
+    color:var(--muted);
+    line-height:1.8;
+}
+
+.contact{
+    padding:50px;
+    border:1px solid var(--border);
+    border-radius:24px;
+}
+
+.contact p{
+    color:var(--muted);
+    margin-top:10px;
+}
+
+footer{
+    padding:40px 0;
+    text-align:center;
+    color:var(--muted);
+    border-top:1px solid var(--border);
+}
+
+@media(max-width:768px){
+
+nav ul{
+    display:none;
+}
+
+.hero{
+    padding-top:80px;
+}
+
+.hero h1{
+    font-size:3.8rem;
+}
+
+.stats{
+    gap:40px;
+}
+
+.section-title{
+    font-size:2.2rem;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="container nav-content">
+
+        <div class="logo">MigFracassi</div>
+
+        <ul>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+<section class="hero">
+
+    <div class="container">
+
+        <span class="tag">
+            DEVELOPMENT • DISCORD • AUTOMATION
+        </span>
+
+        <h1>
+            Prazer, Miguel.
+        </h1>
+
+        <p>
+            Crio bots personalizados, sistemas internos, automações avançadas e
+            infraestruturas digitais para comunidades, criadores e organizações
+            que buscam crescimento, qualidade e escalabilidade.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#projects" class="btn primary">
+                Explorar Projetos
+            </a>
+
+            <a href="#contact" class="btn secondary">
+                Entrar em Contato
+            </a>
+
+        </div>
+
+        <div class="stats">
+
+            <div>
+                <h2>100+</h2>
+                <span>Sistemas desenvolvidos</span>
+            </div>
+
+            <div>
+                <h2>20+</h2>
+                <span>Projetos entregues</span>
+            </div>
+
+            <div>
+                <h2>4</h2>
+                <span>Empresas parceiras</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="trusted">
+
+    <div class="container">
+
+        <small>TRABALHOS E COLABORAÇÕES</small>
+
+        <div class="companies">
+
+            <div class="company">VOLT ROBLOX</div>
+            <div class="company">TUNE DKS</div>
+            <div class="company">DKS ENTERTAIN</div>
+            <div class="company">NOW STREAM</div>
+            <div class="company">DISGRAM</div>
+
+        </div>
+
+        <p class="trusted-text">
+            Confiado por equipes, criadores e comunidades que buscam qualidade,
+            automação e escalabilidade.
+        </p>
+
+    </div>
+
+</section>
+
+<section id="about">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Sobre
+        </h2>
+
+        <div class="about">
+
+            <p>
+                Sou desenvolvedor especializado em Discord, automações e gestão
+                de comunidades. Trabalho na criação de soluções digitais que
+                simplificam processos, aumentam a produtividade e oferecem
+                experiências modernas para usuários e equipes.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="projects">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Projetos Selecionados
+        </h2>
+
+        <div class="projects">
+
+            <div class="project">
+                <h3>Sistema de Tickets</h3>
+                <p>
+                    Plataforma de suporte com atendimento automatizado,
+                    painéis persistentes e gerenciamento avançado.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Bot de Eventos</h3>
+                <p>
+                    Solução para gerenciamento de eventos, participantes
+                    e equipes em comunidades Discord.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Sistema de Verificação</h3>
+                <p>
+                    Controle de acesso inteligente com autenticação
+                    automatizada para servidores de grande porte.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="contact">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Vamos conversar.
+        </h2>
+
+        <div class="contact">
+
+            <h3>Discord</h3>
+            <p>@miggfracassi</p>
+
+            <br>
+
+            <h3>Email</h3>
+            <p>miggfracassi@gmail.com</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Mig. Todos os direitos reservados.
+</footer>
+
+</body>
+</html>
