@@ -14,7 +14,7 @@
 
 <style>
 :root{
-    --primary:#3b82f6;
+    --primary:#009c3b;
     --text:#0f172a;
     --muted:#64748b;
     --border:#e5e7eb;
@@ -77,6 +77,33 @@ nav a{
 
 nav a:hover{
     color:var(--text);
+}
+
+.hero{
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:rgba(0,156,59,.05);
+    border-radius:50%;
+    top:-150px;
+    right:-150px;
+}
+
+.hero::after{
+    content:'';
+    position:absolute;
+    width:350px;
+    height:350px;
+    background:rgba(255,223,0,.08);
+    border-radius:50%;
+    bottom:-100px;
+    left:-100px;
 }
 
 .hero{
@@ -296,7 +323,7 @@ nav ul{
     <div class="container">
 
         <span class="tag">
-            DEVELOPMENT • DISCORD • AUTOMATION
+            DESENVOLVEDOR BRASILEIRO • DISCORD • AUTOMAÇÃO
         </span>
 
         <h1>
@@ -334,7 +361,7 @@ nav ul{
             </div>
 
             <div>
-                <h2>5</h2>
+                <h2>4</h2>
                 <span>Empresas parceiras</span>
             </div>
 
@@ -457,7 +484,7 @@ nav ul{
 </section>
 
 <footer>
-    © 2026 Mig. Todos os direitos reservados.
+   🇧🇷 Desenvolvido por Miguel Fracassi • Brasil • © 2026
 </footer>
 
 </body>
